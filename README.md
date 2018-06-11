@@ -2,6 +2,11 @@
 
 Palette implementation for Flutter. It uses native iOS and Android implementations.
 
+```
+Palette palette = await PaletteLib.getPalette(imageFile.path);
+print(palette.vibrant);
+```
+
 - iOS implementation uses: https://github.com/shnhrrsn/ImagePalette
 - Android implementation uses Android Support palette-v7 [docs](https://developer.android.com/reference/android/support/v7/graphics/Palette)
 
@@ -28,4 +33,4 @@ public var hashValue: Int {
 
 ## Getting Started
 
-- There is a small example app in this repo.
+- There is a [small example app](https://github.com/andreidiaconu/FlutterPalette/blob/master/example/lib/main.dart) in this repo.

@@ -26,8 +26,8 @@ class _MyAppState extends State<MyApp> {
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> getImageAndPalette() async {
     File imageFile = await ImagePicker.pickImage(source: ImageSource.gallery);
-    Palette palette;
-    palette = await PaletteLib.getPalette(imageFile.path);
+    Palette palette = await PaletteLib.getPalette(imageFile.path);
+    print(palette.vibrant);
 
     // If the widget was removed from the tree while the asynchronous platform
     // message was in flight, we want to discard the reply rather than calling
