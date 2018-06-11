@@ -34,3 +34,7 @@ public var hashValue: Int {
 ## Getting Started
 
 - There is a [small example app](https://github.com/andreidiaconu/FlutterPalette/blob/master/example/lib/main.dart) in this repo.
+
+## License
+
+This repo and library is published under [Apache License 2.0](https://github.com/andreidiaconu/FlutterPalette/blob/master/LICENSE). Feel free to use it.
