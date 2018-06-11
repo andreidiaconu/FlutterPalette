@@ -1,0 +1,39 @@
+PODS:
+  - Flutter (1.0.0)
+  - image_picker (0.0.1):
+    - Flutter
+  - ImagePalette (0.1.0):
+    - SwiftPriorityQueue (~> 1.1.2)
+  - palette (0.0.1):
+    - Flutter
+    - ImagePalette
+  - SwiftPriorityQueue (1.1.2)
+
+DEPENDENCIES:
+  - Flutter (from `.symlinks/flutter/ios`)
+  - image_picker (from `.symlinks/plugins/image_picker/ios`)
+  - palette (from `.symlinks/plugins/palette/ios`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ImagePalette
+    - SwiftPriorityQueue
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: ".symlinks/flutter/ios"
+  image_picker:
+    :path: ".symlinks/plugins/image_picker/ios"
+  palette:
+    :path: ".symlinks/plugins/palette/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 9d0fac939486c9aba2809b7982dfdbb47a7b0296
+  image_picker: ee00aab0487cedc80a304085219503cc6d0f2e22
+  ImagePalette: f8e497636f8c2db4f5ff04a1372ce6b8a3fbb06a
+  palette: cb1761e63922656df84a2702f809e82969e7974e
+  SwiftPriorityQueue: bafec150153c600a6b9f97b42abe25538745fadb
+
+PODFILE CHECKSUM: 7765ea4305eaab0b3dfd384c7de11902aa3195fd
+
+COCOAPODS: 1.5.3
