@@ -7,29 +7,18 @@ Palette palette = await PaletteLib.getPalette(imageFile.path);
 print(palette.vibrant);
 ```
 
+# DEPRECATED - There's something better out there
+Use https://pub.dartlang.org/packages/palette_generator instead of this. 
+
+While we still use this implementation in our app and will keep maintaining it for now, the `palette_generator` plugin is really cool and fully written in Dart. We intend to move our own app to use it and consolidate any bug fixing in one good plugin instead of many smaller, not so well maintained plugins. You can still look around this repo if you want to see a decent example for creating an async, computation heavy plugin example for Flutter.
+
+# Native implementation
 - iOS implementation uses: https://github.com/shnhrrsn/ImagePalette
 - Android implementation uses Android Support palette-v7 [docs](https://developer.android.com/reference/android/support/v7/graphics/Palette)
 
 # Known issues
-- Library is not published. I'll do this soon. In the meantime use this repo as inspiration
-- iOS library has not been updated to Swift 4.0 (it uses an old SwiftPriorityQueue version)
- - There is a [pull request](https://github.com/shnhrrsn/ImagePalette/pull/7) open for that.
- - Temporary solution: Run the project in xcode and fix the 5 errors that pop up, unlocking the library files. Sorry, I'm not an experienced iOS developer, perhaps there are better solutions and I am open to suggestions. Thank you!
- - Eg. `swap(&heap[A], &heap[B])` becomes `heap.swapAt(A, B)`
-
-```
-public var hashValue: Int {
-    let maxInt = Int64(Int32.max)
-    return Int((31 * self.color.hashValue + self.population) % maxInt)
-}
-```
-becomes:
-```
-public var hashValue: Int {
-    let maxInt = Int(exactly: Int32.max)!
-    return (31 * self.color.hashValue).advanced(by: Int(self.population)) % maxInt
-}
-```
+- Library is not published. You can use it by declaring it as a git dependency in your pubspec
+- iOS library has not been updated to Swift 4.0 (it uses an old SwiftPriorityQueue version). We manually fixed the few issues reported by xcode on our machines. This is not ideal. There is a [pull request](https://github.com/shnhrrsn/ImagePalette/pull/7) open for that.
 
 ## Getting Started
 
